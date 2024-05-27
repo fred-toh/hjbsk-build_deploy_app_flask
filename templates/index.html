@@ -2,7 +2,9 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="./static/mywebscript.js"></script>
+<!--    
+        <script src="./static/mywebscript.js"></script> 
+-->
     <style>
         .center-heading {
             text-align: center;
@@ -24,15 +26,23 @@
                 <label class="form-label">Number 2</label>
                 <input type="number" class="form-control" id="num2">
             </div>
-    
+<!--    
             <div style="padding: 25px;">
                 <button onclick="runAddition()" class="btn btn-secondary">Add</button>
                 <button onclick="runSubtraction()" class="btn btn-secondary">Subtract</button>
                 <button onclick="runMultiplication()" class="btn btn-secondary">Multiply</button>
             </div>
+-->
+            <div>
+                <a class="btn btn-sm btn-primary" href="{{url_for('sum_route')}}">Add</a>
+                <a class="btn btn-sm btn-primary" href="{{url_for('sub_route')}}">Subtract</a>
+                <a class="btn btn-sm btn-primary" href="{{url_for('mul_route')}}">Multiply</a>                                
+            </div>
 	<h1 class="center-heading">Response from server</h1> 
             <div style="padding: 25px 25px 25px 25px;">
-    
+                <div>
+                    {{result}}
+                </div>    
             <div id="system_response" style="padding: 25px;"></div>
         </div>
     </div>
