@@ -7,6 +7,8 @@ app = Flask("Mathematics Problem Solver")
 result = {'result':""}
 
 @app.route("/sum", methods=["POST"])
+# @app.route("/sum")
+# def sum_route():
 def sum_route(num1, num2):
     # num1 = float(request.args.get('num1'))
     # num2 = float(request.args.get('num2'))
